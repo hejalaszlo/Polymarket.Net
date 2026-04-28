@@ -269,6 +269,25 @@ Make a one time donation in a crypto currency of your choice. If you prefer to d
 Alternatively, sponsor me on Github using [Github Sponsors](https://github.com/sponsors/JKorf). 
 
 ## Release notes
+* Version 3.0.0 - 28 Apr 2026
+    * Updated library to use V2 Clob API
+    * Updated CryptoExchange.Net to version 11.1.1
+    * Added restClient.ClobApi.ExchangeData.GetMarketInfoAsync endpoint
+    * Added tokenId parameter to GetUserTradesAsync endpoint
+    * Added BuilderCode to REST client options
+    * Updated GetUserTradesAsync endpoint from /data/trades to /trades
+    * Updated PostOrderHeartbeatAsync endpoint from /v1/heartbeats to /heartbeats
+    * Updated documentation references
+    * Renamed all ConditionId parameters/properties to MarketId for consistency
+    * Renamed all AssetId parameters/properties to TokenId for consistency
+    * Removed deprecated takerAddress, nonce and feeRateBps from PlaceOrder endpoints
+    * Removed takerAddress parameter from GetUserTradesAsync endpoint
+    * Removed BuilderApiKey, BuilderSecret, BuilderPass from REST client options
+
+    * Notes for updating:
+        * This release only supports request signing for the V2 Clob API, which will go live after the 28th of April 2026 11:00 UTC. To test this release before the V2 API is live update the CLOB rest address to `https://clob-v2.polymarket.com` in the client options Environment setting
+        * A default builder fee of 0.01% / 1bps has been enabled by default to support development, this can be turned of in the client options by setting BuilderCode to null
+
 * Version 2.2.0 - 24 Apr 2026
     * Added QuantityType parameter to PlaceOrder endpoints which allows to specify market buy orders in USD value instead of number of shares
     * Updated book caching logic to only store for 2 seconds instead of indefinitely to fix outdated info preventing correct order placement
