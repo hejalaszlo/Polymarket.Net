@@ -434,7 +434,7 @@ namespace Polymarket.Net.Clients.ClobApi
         {
             var parameters = new ParameterCollection();
             parameters.AddOptional("id", tradeId);
-            parameters.AddOptional("maker", makerAddress);
+            parameters.AddOptional("maker_address", makerAddress);
             parameters.AddOptional("market", marketId);
             parameters.AddOptional("asset_id", tokenId);
             parameters.AddOptionalMillisecondsString("after", startTime);

@@ -173,7 +173,7 @@ namespace Polymarket.Net.Interfaces.Clients.ClobApi
         /// </para>
         /// </summary>
         /// <param name="tradeId">["<c>id</c>"] Filter by trade id</param>
-        /// <param name="makerAddress">["<c>maker</c>"] Filter by maker address</param>
+        /// <param name="makerAddress">["<c>maker_address</c>"] Filter by maker address</param>
         /// <param name="marketId">["<c>market</c>"] Filter by market id</param>
         /// <param name="tokenId">["<c>asset_id</c>"] Filter by token id</param>
         /// <param name="startTime">["<c>after</c>"] Filter by start time</param>
