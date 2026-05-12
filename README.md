@@ -205,6 +205,21 @@ services.AddPolymarket(options =>
 
 For information on the clients, dependency injection, response processing and more see the [documentation](https://cryptoexchange.jkorf.dev/client-libs/getting-started), or have a look at the examples [here](https://github.com/JKorf/Polymarket.Net/tree/main/Examples) or [here](https://github.com/JKorf/CryptoExchange.Net/tree/master/Examples).
 
+## AI / LLM documentation
+
+Polymarket.Net includes AI-oriented documentation and examples for code generation tools:
+
+|File|Purpose|
+|--|--|
+|[`AGENTS.md`](AGENTS.md)|Assistant skill with core Polymarket.Net patterns, pitfalls, and examples|
+|[`CLAUDE.md`](CLAUDE.md)|Claude-oriented guide with authentication rules and source-of-truth files|
+|[`llms.txt`](llms.txt)|Short LLM index with links to docs, examples, and critical usage rules|
+|[`llms-full.txt`](llms-full.txt)|Detailed LLM context with endpoint routing, authentication levels, code patterns, and anti-hallucination checks|
+|[`docs/ai-api-map.md`](docs/ai-api-map.md)|Table-style intent-to-method map for CLOB, Gamma, Data, WebSocket, authentication, DI, and local order book workflows|
+|[`Examples/ai-friendly`](Examples/ai-friendly)|Compilable single-file examples for common REST, authentication/trading, WebSocket, DI/order book, and error handling workflows|
+
+GitHub Copilot and Cursor instructions are also provided in `.github/copilot-instructions.md` and `.cursor/rules/polymarket-net.mdc`; both point back to the root AI context files.
+
 **NOTE**  
 Polymarket.Net uses the Builder Code mechanism for Polymarket, which means that an additional 1bps / 0.01% fee is charged on top of orders placed with the library to fund development. This is entirely optional and can be disabled in the client options by setting `BuilderCode` to `null` in the REST client options.
 

@@ -18,7 +18,7 @@
         /// </summary>
         Proxy = 2,
         /// <summary>
-        /// Poly 1271 signatures, using an deposit address. For accounts created after 04 APR 2026
+        /// Poly 1271 signatures, using an deposit address. For accounts created after 04 May 2026
         /// </summary>
         Poly1271 = 3
     }
