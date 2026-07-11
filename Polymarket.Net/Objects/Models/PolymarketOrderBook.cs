@@ -53,7 +53,7 @@ namespace Polymarket.Net.Objects.Models
         /// ["<c>last_trade_price</c>"] Last trade price
         /// </summary>
         [JsonPropertyName("last_trade_price")]
-        public decimal LastPrice { get; set; }
+        public decimal? LastPrice { get; set; }
         /// <summary>
         /// ["<c>neg_risk</c>"] Negative risk enabled
         /// </summary>
