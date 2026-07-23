@@ -460,6 +460,11 @@ namespace Polymarket.Net.Objects.Models
         /// ["<c>templates</c>"] Templates
         /// </summary>
         [JsonPropertyName("templates")]
-        public PolymarketTemplate[]? Templates { get; set; } 
+        public PolymarketTemplate[]? Templates { get; set; }
+        /// <summary>
+        /// ["<c>gameId</c>"] Game ID
+        /// </summary>
+        [JsonPropertyName("gameId")]
+        public string GameId { get; set; } = string.Empty;
     }
 }

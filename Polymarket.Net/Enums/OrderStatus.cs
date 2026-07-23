@@ -24,6 +24,16 @@ namespace Polymarket.Net.Enums
         /// ["<c>MATCHED</c>"] Matched
         /// </summary>
         [Map("MATCHED", "matched")]
-        Matched
+        Matched,
+        /// <summary>
+        /// Unmatched
+        /// </summary>
+        [Map("UNMATCHED", "unmatched")]
+        Unmatched,
+        /// <summary>
+        /// Delayed
+        /// </summary>
+        [Map("DELAYED", "delayed")]
+        Delayed
     }
 }
