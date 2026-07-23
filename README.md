@@ -313,6 +313,10 @@ Make a one time donation in a crypto currency of your choice. If you prefer to d
 Alternatively, sponsor me on Github using [Github Sponsors](https://github.com/sponsors/JKorf). 
 
 ## Release notes
+* Version 4.2.1 - 23 Jul 2026
+    * Added GameId to PolymarketEvent model
+    * Added Unmatched, Delayed values to OrderStatus Enum
+
 * Version 4.2.0 - 21 Jul 2026
     * Updated CryptoExchange.Net to v12.2.0 
 
