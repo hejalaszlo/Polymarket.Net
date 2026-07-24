@@ -92,5 +92,28 @@ namespace Polymarket.Net.Clients.DataApi
             var request = _definitions.GetOrCreate(HttpMethod.Get, BaseAddress, "positions", PolymarketPlatform.RateLimiter.DataApi, 1, false);
             return await SendAsync<PolymarketPosition[]>(request, parameters, ct).ConfigureAwait(false);
         }
-    }
+
+		public async Task<HttpResult<PolymarketClosedPosition[]>> GetClosedPositionsAsync(
+			string user,
+			string? market = null,
+			string? eventId = null,
+			int? limit = null,
+			int? offset = null,
+			ClosedPositionSortBy? sortBy = null,
+			SortDirection? sortDirection = null,
+			string? title = null,
+			CancellationToken ct = default) {
+			var parameters = new Parameters(PolymarketPlatform._parameterSerializationSettings);
+			parameters.Add("user", user);
+			parameters.Add("market", market);
+			parameters.Add("eventId", eventId);
+			parameters.Add("limit", limit);
+			parameters.Add("offset", offset);
+			parameters.Add("sortBy", sortBy);
+			parameters.Add("sortDirection", sortDirection);
+			parameters.Add("title", title);
+			var request = _definitions.GetOrCreate(HttpMethod.Get, BaseAddress, "closed-positions", PolymarketPlatform.RateLimiter.DataApi, 1, false);
+			return await SendAsync<PolymarketClosedPosition[]>(request, parameters, ct).ConfigureAwait(false);
+		}
+	}
 }

@@ -49,5 +49,35 @@ namespace Polymarket.Net.Interfaces.Clients.DataApi
 			SortDirection? sortDirection = null,
 			string? title = null,
 			CancellationToken ct = default);
-    }
+
+		/// <summary>
+		/// Get list of closed positions for a user
+		/// <para>
+		/// Docs:<br />
+		/// <a href="https://docs.polymarket.com/api-reference/core/get-closed-positions-for-a-user" /><br />
+		/// Endpoint:<br />
+		/// GET /closed-positions
+		/// </para>
+		/// </summary>
+		/// <param name="user">["<c>user</c>"] By user</param>
+		/// <param name="market">["<c>market</c>"] Comma-separated list of condition IDs. Mutually exclusive with eventId.</param>
+		/// <param name="eventId">["<c>eventId</c>"] Comma-separated list of event IDs. Mutually exclusive with market.</param>
+		/// <param name="limit">["<c>limit</c>"]</param>
+		/// <param name="offset">["<c>offset</c>"]</param>
+		/// <param name="sortBy">["<c>sortBy</c>"]</param>
+		/// <param name="sortDirection">["<c>sortDirection</c>"]</param>
+		/// <param name="title">["<c>title</c>"]</param>
+		/// <param name="ct"></param>
+		/// <returns></returns>
+		Task<HttpResult<PolymarketClosedPosition[]>> GetClosedPositionsAsync(
+			string user,
+			string? market = null,
+			string? eventId = null,
+			int? limit = null,
+			int? offset = null,
+			ClosedPositionSortBy? sortBy = null,
+			SortDirection? sortDirection = null,
+			string? title = null,
+			CancellationToken ct = default);
+	}
 }

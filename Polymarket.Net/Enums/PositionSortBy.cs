@@ -49,9 +49,9 @@ namespace Polymarket.Net.Enums {
 		[Map("PRICE")]
 		Price,
 		/// <summary>
-		/// ["<c>AVGPRICE </c>"] AvgPrice
+		/// ["<c>AVGPRICE</c>"] AvgPrice
 		/// </summary>
-		[Map("AVGPRICE ")]
+		[Map("AVGPRICE")]
 		AvgPrice
 	}
 }
